@@ -1,4 +1,4 @@
-from PBInterpreter import PBInterpreter
+from execute.PBInterpreter import PBInterpreter
 
 Interpreter = PBInterpreter(["hello", "world"], 
 

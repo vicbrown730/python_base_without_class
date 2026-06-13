@@ -2,7 +2,7 @@ from fault import LoadFault
 
 class PBInterpreter:
     
-    def __init__(self, const: list[tuple[str, int]] = [], instruction: list = []):
+    def __init__(self, const: list[int|float|str|bool|list] = [], instruction: list[tuple[str, int]] = []):
         self.stack = []
         self.global_var = {}
         self.const = const
