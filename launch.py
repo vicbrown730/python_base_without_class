@@ -1,9 +1,16 @@
-from execute.PBInterpreter import PBInterpreter
+from VM.PBInterpreter import PBInterpreter
 
-Interpreter = PBInterpreter(["hello", "world"], 
-
-[("load_const", 1)] #故意越界
-
-)
+Interpreter = PBInterpreter(
+[
+    #代码块0
+    (
+        ["hello", "world"],
+        [
+            ("load_const", 0), 
+            ("load_const", 1)
+        ]
+    )
+])
 
 Interpreter.run()
+print(Interpreter.stack)
